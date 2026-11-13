@@ -1,0 +1,451 @@
+<WatchFace
+  height="450"
+  width="450">
+
+  <Metadata
+    key="CLOCK_TYPE"
+    value="ANALOG" />
+
+  <Scene>
+    <!-- Left complication -->
+    <ComplicationSlot
+      displayName="left_complication_label"
+      height="120"
+      slotId="2"
+      supportedTypes="GOAL_PROGRESS SHORT_TEXT EMPTY"
+      width="120"
+      x="68"
+      y="165">
+      <Variant
+        mode="AMBIENT"
+        target="alpha"
+        value="0" />
+      <BoundingOval
+        height="120"
+        width="120"
+        x="0"
+        y="0" />
+      <Complication type="GOAL_PROGRESS">
+        <PartDraw
+          height="120"
+          width="120"
+          x="0"
+          y="0">
+          <Arc
+            centerX="60"
+            centerY="60"
+            endAngle="355"
+            height="116"
+            startAngle="5"
+            width="116">
+            <Stroke
+              cap="ROUND"
+              color="#60FF8000"
+              thickness="4" />
+          </Arc>
+          <Arc
+            centerX="60"
+            centerY="60"
+            endAngle="355"
+            height="116"
+            startAngle="5"
+            width="116">
+            <Stroke
+              cap="ROUND"
+              color="#FF8000"
+              thickness="4" />
+            <Transform
+              target="endAngle"
+              value="5 + (clamp([COMPLICATION.GOAL_PROGRESS_VALUE], 0, [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) * 350" />
+          </Arc>
+        </PartDraw>
+
+        <PartText
+          height="60"
+          width="100"
+          x="10"
+          y="40">
+          <Text isAutoSize="TRUE">
+            <Font
+              family="SYNC_TO_DEVICE"
+              size="34">
+              <Template><![CDATA[%s]]>
+                <Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+
+        <PartImage
+          height="42"
+          width="42"
+          x="39"
+          y="8">
+          <ImageFilters>
+            <HsbFilter
+              brightness="2"
+              saturate="0" />
+          </ImageFilters>
+          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+        </PartImage>
+      </Complication>
+
+      <Complication type="SHORT_TEXT">
+        <PartText
+          height="60"
+          width="100"
+          x="10"
+          y="40">
+          <Text isAutoSize="TRUE">
+            <Font
+              family="SYNC_TO_DEVICE"
+              size="34">
+              <Template><![CDATA[%s]]>
+                <Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+
+        <PartImage
+          height="42"
+          width="42"
+          x="39"
+          y="8">
+          <ImageFilters>
+            <HsbFilter
+              brightness="2"
+              saturate="0" />
+          </ImageFilters>
+          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+        </PartImage>
+      </Complication>
+    </ComplicationSlot>
+
+    <!-- Right complication -->
+    <ComplicationSlot
+      displayName="right_complication_label"
+      height="120"
+      slotId="3"
+      supportedTypes="GOAL_PROGRESS SHORT_TEXT EMPTY"
+      width="120"
+      x="262"
+      y="165">
+      <Variant
+        mode="AMBIENT"
+        target="alpha"
+        value="0" />
+      <BoundingOval
+        height="120"
+        width="120"
+        x="0"
+        y="0" />
+      <Complication type="GOAL_PROGRESS">
+        <PartDraw
+          height="120"
+          width="120"
+          x="0"
+          y="0">
+          <Arc
+            centerX="60"
+            centerY="60"
+            endAngle="355"
+            height="116"
+            startAngle="5"
+            width="116">
+            <Stroke
+              cap="ROUND"
+              color="#60FF8000"
+              thickness="4" />
+          </Arc>
+          <Arc
+            centerX="60"
+            centerY="60"
+            endAngle="355"
+            height="116"
+            startAngle="5"
+            width="116">
+            <Stroke
+              cap="ROUND"
+              color="#FF8000"
+              thickness="4" />
+            <Transform
+              target="endAngle"
+              value="5 + (clamp([COMPLICATION.GOAL_PROGRESS_VALUE], 0, [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) / [COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]) * 350" />
+          </Arc>
+        </PartDraw>
+
+        <PartText
+          height="60"
+          width="100"
+          x="10"
+          y="40">
+          <Text isAutoSize="TRUE">
+            <Font
+              family="SYNC_TO_DEVICE"
+              size="34">
+              <Template><![CDATA[%s]]>
+                <Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+
+        <PartImage
+          height="42"
+          width="42"
+          x="39"
+          y="8">
+          <ImageFilters>
+            <HsbFilter
+              brightness="2"
+              saturate="0" />
+          </ImageFilters>
+          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+        </PartImage>
+      </Complication>
+
+      <Complication type="SHORT_TEXT">
+        <PartText
+          height="60"
+          width="100"
+          x="10"
+          y="40">
+          <Text isAutoSize="TRUE">
+            <Font
+              family="SYNC_TO_DEVICE"
+              size="34">
+              <Template><![CDATA[%s]]>
+                <Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+
+        <PartImage
+          height="42"
+          width="42"
+          x="39"
+          y="8">
+          <ImageFilters>
+            <HsbFilter
+              brightness="2"
+              saturate="0" />
+          </ImageFilters>
+          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+        </PartImage>
+      </Complication>
+    </ComplicationSlot>
+
+
+    <!-- Top complication -->
+    <ComplicationSlot
+      displayName="top_complication_label"
+      height="90"
+      slotId="0"
+      supportedTypes="LONG_TEXT SHORT_TEXT EMPTY"
+      width="300"
+      x="75"
+      y="70">
+      <BoundingRoundBox
+        cornerRadius="10"
+        height="90"
+        width="300"
+        x="0"
+        y="0" />
+      <Complication type="LONG_TEXT">
+        <PartText
+          height="90"
+          width="300"
+          x="0"
+          y="0">
+          <TextCircular
+            centerX="150"
+            centerY="160"
+            ellipsis="TRUE"
+            endAngle="90"
+            height="272"
+            startAngle="-90"
+            width="272">
+            <Font
+              family="SYNC_TO_DEVICE"
+              size="36">
+              <Template><![CDATA[%s]]>
+                <Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </TextCircular>
+        </PartText>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <PartText
+          height="90"
+          width="300"
+          x="0"
+          y="0">
+          <TextCircular
+            centerX="150"
+            centerY="160"
+            ellipsis="TRUE"
+            endAngle="90"
+            height="272"
+            startAngle="-90"
+            width="272">
+            <Font
+              family="SYNC_TO_DEVICE"
+              size="36">
+              <Template><![CDATA[%s]]>
+                <Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </TextCircular>
+        </PartText>
+      </Complication>
+    </ComplicationSlot>
+
+    <!-- Bottom complication -->
+    <ComplicationSlot
+      displayName="bottom_complication_label"
+      height="90"
+      slotId="1"
+      supportedTypes="LONG_TEXT SHORT_TEXT EMPTY"
+      width="300"
+      x="75"
+      y="290">
+      <Variant
+        mode="AMBIENT"
+        target="alpha"
+        value="0" />
+      <BoundingRoundBox
+        cornerRadius="10"
+        height="90"
+        width="300"
+        x="0"
+        y="0" />
+      <Complication type="LONG_TEXT">
+        <PartText
+          height="90"
+          width="300"
+          x="0"
+          y="0">
+          <TextCircular
+            centerX="150"
+            centerY="-60"
+            direction="COUNTER_CLOCKWISE"
+            ellipsis="TRUE"
+            endAngle="90"
+            height="272"
+            startAngle="-90"
+            width="272">
+            <Font
+              family="SYNC_TO_DEVICE"
+              size="36">
+              <Template><![CDATA[%s]]>
+                <Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </TextCircular>
+        </PartText>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <PartText
+          height="90"
+          width="300"
+          x="0"
+          y="0">
+          <TextCircular
+            centerX="150"
+            centerY="-60"
+            direction="COUNTER_CLOCKWISE"
+            ellipsis="TRUE"
+            endAngle="90"
+            height="272"
+            startAngle="-90"
+            width="272">
+            <Font
+              family="SYNC_TO_DEVICE"
+              size="36">
+              <Template><![CDATA[%s]]>
+                <Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </TextCircular>
+        </PartText>
+      </Complication>
+    </ComplicationSlot>
+
+    <!-- Dial -->
+
+    <!-- Hands -->
+    <AnalogClock
+      height="450"
+      width="450"
+      x="200"
+      y="0">
+
+      <!-- Hour -->
+      <HourHand
+        height="450"
+        resource="hour_shadow"
+        width="50"
+        x="0"
+        y="0" />
+
+      <HourHand
+        height="450"
+        resource="hour"
+        width="50"
+        x="0"
+        y="0" />
+
+      <!-- Minute -->
+      <MinuteHand
+        height="450"
+        resource="minute_shadow"
+        width="50"
+        x="0"
+        y="0" />
+
+      <MinuteHand
+        height="450"
+        resource="minute"
+        width="50"
+        x="0"
+        y="0" />
+
+      <!-- Second -->
+      <SecondHand
+        height="450"
+        resource="second_shadow"
+        width="50"
+        x="0"
+        y="0">
+        <Tick
+          duration=".125"
+          strength=".25" />
+
+        <Variant
+          mode="AMBIENT"
+          target="alpha"
+          value="0" />
+      </SecondHand>
+
+      <SecondHand
+        height="450"
+        resource="second"
+        width="50"
+        x="0"
+        y="0">
+        <Tick
+          duration=".125"
+          strength=".25" />
+
+        <Variant
+          mode="AMBIENT"
+          target="alpha"
+          value="0" />
+      </SecondHand>
+
+    </AnalogClock>
+  </Scene>
+</WatchFace>

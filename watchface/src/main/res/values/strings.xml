@@ -1,0 +1,7 @@
+<resources>
+  <string name="watch_face_name">SimpleWatchFace4</string>
+  <string name="top_complication_label">Top</string>
+  <string name="left_complication_label">Left</string>
+  <string name="right_complication_label">Right</string>
+  <string name="bottom_complication_label">Bottom</string>
+</resources>
